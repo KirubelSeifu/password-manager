@@ -57,14 +57,17 @@ Storage: The encrypted data is stored as a base64-encoded string in a JSON file 
 
 Decryption: To view passwords, you must provide the correct master password to regenerate the same key and decrypt the data file.
 
-📁 Project Structure
+## 📁 Project Structure
+
+```
 password-manager/
-├── password_manager.py      # Main application code
-├── vault.key                # The salt for key derivation (NOT your master password)
-├── passwords.enc            # Encrypted password database (JSON format)
-├── .gitignore               # Excludes vault.key and passwords.enc
-├── README.md                # This file
-└── requirements.txt         # Project dependencies
+├── password_manager.py
+├── vault.key                 # Auto-generated, contains salt
+├── passwords.enc             # Auto-generated, encrypted database
+├── README.md
+├── .gitignore
+└── requirements.txt
+```
 
 ⚠️ Important Security Notes
 This is a learning project. While it uses strong, modern cryptography, it has not undergone a professional security audit.
